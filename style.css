@@ -143,3 +143,25 @@ section { scroll-margin-top: 1rem; }
 }
 .app-card h3 { margin-top: 0.5rem; }
 .app-card p:last-child { margin-bottom: 0; }
+
+.objection {
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+.objection h3 { margin-top: 0; }
+
+.steps { padding-left: 1.35rem; }
+.steps li { margin-bottom: 0.6rem; }
+
+.contact { margin: 1rem 0; }
+.contact dt {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.contact dd {
+  margin: 0.25rem 0 0;
+  padding-left: 0;
+}
+
+.callout h3 { margin-top: 0; }
