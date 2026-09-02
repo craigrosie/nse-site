@@ -116,3 +116,30 @@ section { scroll-margin-top: 1rem; }
   font-size: 0.95rem;
 }
 .site-footer p { margin: 0.35rem 0; }
+
+.intro {
+  margin: 2rem 0 1.5rem;
+  font-size: 1.1rem;
+}
+
+.callout {
+  border: 2px solid var(--callout-border);
+  background: var(--callout-bg);
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin: 2rem 0;
+}
+.callout h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+.app-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.app-card h3 { margin-top: 0.5rem; }
+.app-card p:last-child { margin-bottom: 0; }
