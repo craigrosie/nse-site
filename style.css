@@ -9,6 +9,8 @@
   --callout-border: #a86e00;
   --btn-bg: #0b4f9e;
   --btn-text: #ffffff;
+  --band-a-bg: #f1ebe0;
+  --band-b-bg: #e7edea;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,6 +25,8 @@
     --callout-border: #d9a441;
     --btn-bg: #2c6fc0;
     --btn-text: #ffffff;
+    --band-a-bg: #221f1a;
+    --band-b-bg: #16201c;
   }
 }
 
@@ -45,16 +49,20 @@ body {
 
 .wrap {
   width: 100%;
-  max-width: 40rem;
+  max-width: 46rem;
   margin: 0 auto;
   padding: 0 1.25rem;
+}
+
+@media (min-width: 75rem) {
+  .wrap { max-width: 58rem; }
 }
 
 h1, h2, h3 { line-height: 1.25; }
 h1 { font-size: 1.85rem; margin: 0 0 0.5rem; }
 h2 { font-size: 1.4rem; margin: 2.5rem 0 0.75rem; }
 h3 { font-size: 1.15rem; margin: 1.75rem 0 0.5rem; }
-p, li { max-width: 38rem; }
+p, li { max-width: 42rem; }
 
 a { color: var(--link); }
 a:visited { color: var(--link-visited); }
@@ -92,9 +100,16 @@ a:focus-visible {
   font-weight: 600;
 }
 
-main { padding-bottom: 3rem; }
+main { padding-bottom: 1rem; }
 
 section { scroll-margin-top: 1rem; }
+
+.section-band {
+  padding: 2.5rem 0;
+}
+.section-band h2 { margin-top: 0; }
+.section-band.band-a { background: var(--band-a-bg); }
+.section-band.band-b { background: var(--band-b-bg); }
 
 .btn {
   display: inline-block;
