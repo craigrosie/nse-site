@@ -1594,6 +1594,17 @@
           });
         });
       })();
+
+      (function () {
+        var videos = document.querySelectorAll(".video-gallery video");
+        videos.forEach(function (video) {
+          video.addEventListener("play", function () {
+            videos.forEach(function (other) {
+              if (other !== video) other.pause();
+            });
+          });
+        });
+      })();
     </script>
   </body>
 </html>
