@@ -27,38 +27,48 @@ Everything lives in two files:
 There is no build step. Commit to `main` and GitHub Pages redeploys within a minute
 or two.
 
+## The comment deadline
+
+The deadline appears in three places:
+
+- the `DEADLINE` constant in the countdown script at the bottom of `index.html`
+- the static fallback text in the elements marked `data-countdown` (shown when
+  JavaScript is unavailable)
+- the prose: the bar at the top of the page and the "Comments close on…" heading
+
+Change all of them together.
+
 ## Placeholders to fill in
 
 Every item below appears in `index.html` as bracketed uppercase text. Search for the
 token and replace it, including the square brackets.
 
-- [ ] `[SITE NAME]` — the name of the site or development. Appears in the page title,
-      the meta description, and the `<h1>`.
-- [ ] `[ONE LINE SUMMARY OF WHAT IS PROPOSED]` — the subtitle under the main heading.
-- [ ] `[INTRO PARAGRAPH]` — what is proposed, where, and roughly how large.
-- [ ] `[SECOND INTRO SENTENCE]` — why it matters to people living nearby.
-- [ ] `[COUNCIL NAME]` — the local planning authority. Appears twice.
-- [ ] `[DEADLINE DATE]` — the date comments close. Appears twice: in the top callout
-      and in the callout at the end of the page. Both must be updated.
-- [ ] `[COMMENT FORM URL]` — where the "Comment on the applications" buttons point.
-      Appears twice.
-- [ ] `[APPLICATION 1 REF]` — the first application's reference number. Appears twice.
+- [ ] `[INTRO PARAGRAPH]` — what is now proposed, where, and roughly how large.
+- [ ] `[SITE PLAN IMAGE]` — export a page of the Proposed Site Layout PDF as an image,
+      save it under `images/`, and swap the `.site-plan__placeholder` div for the
+      commented-out `<img class="plate">` next to it. Give the image a real `alt`.
 - [ ] `[APPLICATION 1 DESCRIPTION]` — one plain-English sentence.
-- [ ] `[APPLICATION 1 PORTAL URL]` — the council portal page for application 1.
-- [ ] `[APPLICATION 2 REF]` — the second application's reference number. Appears twice.
 - [ ] `[APPLICATION 2 DESCRIPTION]` — one plain-English sentence.
-- [ ] `[APPLICATION 2 PORTAL URL]` — the council portal page for application 2.
+- [ ] `[KEY DOCUMENTS]` — the two or three documents most worth reading, with links.
 - [ ] `[OBJECTION 1 HEADING]` and `[OBJECTION 1 BODY]`
 - [ ] `[OBJECTION 2 HEADING]` and `[OBJECTION 2 BODY]`
 - [ ] `[OBJECTION 3 HEADING]` and `[OBJECTION 3 BODY]`
 - [ ] `[OBJECTION 4 HEADING]` and `[OBJECTION 4 BODY]`
-- [ ] `[COUNCIL EMAIL]` — appears twice, once as link text and once in the `mailto:`.
-- [ ] `[COUNCIL POSTAL ADDRESS]`
+- [ ] `[TODO: when to pick this]` — appears twice, for Neighbour and Member of the
+      Public under **Commentator Type**.
+- [ ] `[CALLOUT ABOUT CLICKING NEXT]` — what the confirmation looks like, so people
+      know their comment went through.
+- [ ] `[ADD: local detail…]` — in the "What happens after comments close?" answer,
+      which route these applications are expected to take.
+- [ ] `[EMAIL ADDRESS]` — appears twice, once as link text and once in the `mailto:`.
 - [ ] `[LAST UPDATED DATE]` — in the footer.
 - [ ] `[WHO RUNS THIS SITE]` — in the footer.
+
+`[PLANNING REF]` in the "By email" section is deliberate — it is part of the example
+subject line, not a placeholder.
 
 To find any that remain:
 
 ```bash
-grep -o '\[[A-Z0-9 ]*\]' index.html | sort -u
+grep -o '\[[A-Z0-9][^]]*\]' index.html | sort -u
 ```
