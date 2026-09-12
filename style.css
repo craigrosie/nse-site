@@ -137,26 +137,33 @@ figure { margin: 0; }
    --------------------------------------------------------------------------- */
 
 .deadline-bar {
-  border-bottom: 1px solid var(--color-divider);
-  background: var(--color-surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid var(--color-warning);
+  background: var(--color-warning-bg);
 }
 .deadline-bar .wrap {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+  justify-content: center;
   gap: 6px 14px;
   padding: 12px 20px;
+  text-align: center;
 }
 .deadline-bar__count {
   font-variant-numeric: tabular-nums;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
+  font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--color-accent-800);
+  color: var(--color-warning);
 }
 .deadline-bar__date {
   font-size: 0.95rem;
-  color: var(--color-neutral-700);
+  font-weight: 600;
+  color: var(--color-neutral-800);
 }
 
 /* ---------------------------------------------------------------------------
@@ -217,7 +224,7 @@ figure { margin: 0; }
 .toc li:last-child { border-bottom: 1px solid var(--color-divider); }
 .toc a {
   display: grid;
-  grid-template-columns: 2.2rem 1fr;
+  grid-template-columns: 2.2rem 1fr auto;
   align-items: baseline;
   gap: 4px;
   padding: 15px 0;
@@ -225,11 +232,32 @@ figure { margin: 0; }
   font-family: var(--font-heading);
   font-size: 1.3rem;
   line-height: 1.25;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: var(--color-divider);
+  text-underline-offset: 3px;
   color: var(--color-text);
+  transition: padding-left 0.15s ease, text-decoration-color 0.15s ease;
+}
+.toc a::after {
+  content: "\2192";
+  justify-self: end;
+  color: var(--color-accent);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 .toc a:visited { color: var(--color-text); }
-.toc a:hover { color: var(--color-accent-800); }
+.toc a:hover,
+.toc a:focus-visible {
+  color: var(--color-accent-800);
+  text-decoration-color: currentColor;
+  padding-left: 6px;
+}
+.toc a:hover::after,
+.toc a:focus-visible::after {
+  opacity: 1;
+  transform: translateX(0);
+}
 .toc__num {
   font-variant-numeric: tabular-nums;
   color: var(--color-accent);
@@ -576,6 +604,10 @@ figure { margin: 0; }
   border-top: 1px solid var(--color-divider);
 }
 .faq:last-of-type { border-bottom: 1px solid var(--color-divider); }
+.faq.key-documents {
+  margin-top: 32px;
+  border-top-style: dashed;
+}
 .faq summary {
   cursor: pointer;
   list-style: none;

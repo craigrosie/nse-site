@@ -1,6 +1,6 @@
-# [SITE NAME] planning applications
+# Nonsuch Estate planning applications
 
-A single-page information site about the planning applications at [SITE NAME],
+A single-page information site about the planning applications at Nonsuch Estate,
 published with GitHub Pages from the root of the `main` branch.
 
 ## Viewing the site locally
@@ -38,36 +38,18 @@ The deadline appears in three places:
 
 Change all of them together.
 
-## Placeholders to fill in
+## Placeholders
 
-Every item below appears in `index.html` as bracketed uppercase text. Search for the
-token and replace it, including the square brackets.
+All of the original bracketed placeholders have been filled in. The only bracketed
+uppercase text remaining in `index.html` is `[PLANNING REF]` in the "By email"
+section, which is deliberate — it's part of the example subject line, not a TODO.
 
-- [ ] `[INTRO PARAGRAPH]` — what is now proposed, where, and roughly how large.
-- [ ] `[SITE PLAN IMAGE]` — export a page of the Proposed Site Layout PDF as an image,
-      save it under `images/`, and swap the `.site-plan__placeholder` div for the
-      commented-out `<img class="plate">` next to it. Give the image a real `alt`.
-- [ ] `[APPLICATION 1 DESCRIPTION]` — one plain-English sentence.
-- [ ] `[APPLICATION 2 DESCRIPTION]` — one plain-English sentence.
-- [ ] `[KEY DOCUMENTS]` — the two or three documents most worth reading, with links.
-- [ ] `[OBJECTION 1 HEADING]` and `[OBJECTION 1 BODY]`
-- [ ] `[OBJECTION 2 HEADING]` and `[OBJECTION 2 BODY]`
-- [ ] `[OBJECTION 3 HEADING]` and `[OBJECTION 3 BODY]`
-- [ ] `[OBJECTION 4 HEADING]` and `[OBJECTION 4 BODY]`
-- [ ] `[TODO: when to pick this]` — appears twice, for Neighbour and Member of the
-      Public under **Commentator Type**.
-- [ ] `[CALLOUT ABOUT CLICKING NEXT]` — what the confirmation looks like, so people
-      know their comment went through.
-- [ ] `[ADD: local detail…]` — in the "What happens after comments close?" answer,
-      which route these applications are expected to take.
-- [ ] `[EMAIL ADDRESS]` — appears twice, once as link text and once in the `mailto:`.
-- [ ] `[LAST UPDATED DATE]` — in the footer.
-- [ ] `[WHO RUNS THIS SITE]` — in the footer.
+There is no local detail yet on which route these applications are expected to
+take (delegated decision vs. planning committee) — that was previously an
+unanswered FAQ, which was removed rather than left with a guess. Add it back as an
+FAQ entry if and when that becomes known.
 
-`[PLANNING REF]` in the "By email" section is deliberate — it is part of the example
-subject line, not a placeholder.
-
-To find any that remain:
+To check for any new placeholders after editing:
 
 ```bash
 grep -o '\[[A-Z0-9][^]]*\]' index.html | sort -u
