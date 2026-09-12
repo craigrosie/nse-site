@@ -1,0 +1,11 @@
+# Local-only agent instructions
+CLAUDE.md
+
+# Local design/planning notes
+docs/superpowers/
+
+# Tool state
+.serena/
+
+# Reference docs
+references/
