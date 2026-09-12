@@ -48,6 +48,7 @@ body {
   font-family: var(--font-body);
   font-size: 19px;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 @media (min-width: 48rem) {
@@ -63,6 +64,7 @@ a {
   color: var(--color-accent-700);
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
+  overflow-wrap: break-word;
 }
 a:visited { color: var(--color-accent-800); }
 a:hover { color: var(--color-accent-800); text-decoration-thickness: 2px; }
