@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Nonsuch Estate">
+  <rect width="32" height="32" rx="4" fill="#b68235"/>
+  <g fill="#f8f4f4">
+    <!-- thick diagonal, apex top-left to terminal bottom-right -->
+    <path d="M8.6 7 h4 L23.4 21.4 V25 h-4 L8.6 10.6 Z"/>
+    <!-- verticals -->
+    <rect x="8.6" y="7" width="2.3" height="18"/>
+    <rect x="21.1" y="7" width="2.3" height="18"/>
+    <!-- serifs -->
+    <path d="M6 7 h7.5 v1.5 H6 Z"/>
+    <path d="M18.5 7 h7.5 v1.5 h-7.5 Z"/>
+    <path d="M6 23.5 h7.5 V25 H6 Z"/>
+    <path d="M18.5 23.5 h7.5 V25 h-7.5 Z"/>
+  </g>
+</svg>
